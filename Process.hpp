@@ -10,6 +10,7 @@ public:
     int priority;
     bool completed;
 
+    Process(); // Construtor padrão
     Process(int id, int arrival, int burst, int prio);
 };
 

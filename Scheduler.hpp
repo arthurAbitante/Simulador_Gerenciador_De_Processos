@@ -9,17 +9,11 @@ enum class Algorithm {
     Priority
 };
 
-
-class Scheduler{
+class Scheduler {
 public:
     Scheduler(std::vector<Process>& processes, int quantum);
     void step();
-    void draw();
     bool isFinished() const;
-
-    std::vector<Process> getExecutionOrder() const;
-
-public:
     const std::vector<int>& getTimeline() const;
 
 private:
@@ -27,12 +21,10 @@ private:
     std::vector<int> executionTimeline;
     int time = 0;
     int quantum;
-    Algorithm mode;
+    Algorithm mode = Algorithm::RoundRobin;
 
     void runRoundRobin();
     void runPriority();
 };
-
-
 
 #endif

@@ -98,3 +98,11 @@ bool Scheduler::isFinished() const {
 const std::vector<int>& Scheduler::getTimeline() const {
     return executionTimeline;
 }
+
+void Scheduler::setAlgorithm(Algorithm algo){
+    mode = algo;
+}
+
+Algorithm Scheduler::getAlgorithm() const {
+    return mode;
+}

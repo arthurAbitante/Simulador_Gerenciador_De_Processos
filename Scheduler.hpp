@@ -16,6 +16,9 @@ public:
     bool isFinished() const;
     const std::vector<int>& getTimeline() const;
 
+    void setAlgorithm(Algorithm algo);
+    Algorithm getAlgorithm() const;
+
 private:
     std::vector<Process>& processes;
     std::vector<int> executionTimeline;
